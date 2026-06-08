@@ -1,10 +1,15 @@
 using ExamenFinal_LuisMayorga.Components;
+using ExamenFinal_LuisMayorga.Services;
+
 
 var builder = WebApplication.CreateBuilder(args);
+
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
+
+builder.Services.AddSingleton<ProductoService>();
 
 var app = builder.Build();
 
